@@ -6,7 +6,7 @@ import {
     Tag,
     TextCursorInput,
     Link2,
-    Image,
+    Image as ImageIcon,
     Table2,
     LayoutTemplate,
     List,
@@ -64,7 +64,7 @@ export const subTopicsHtml = [
     {
         name: 'Imágenes y multimedia',
         description: 'Insertar imágenes, audio y video',
-        icono: <Image size={30} className='text-Haru' />,
+        icono: <ImageIcon size={30} className='text-Haru' />,
         route: 'multiMedia'
     },
 

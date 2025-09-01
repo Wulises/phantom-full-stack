@@ -2,7 +2,6 @@
 import {
   Palette,
   Paintbrush,
-  Text,
   Box,
   AlignCenterVertical,
   Rows,

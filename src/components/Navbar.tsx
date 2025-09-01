@@ -12,7 +12,7 @@ export default function Navbar(){
                     Phantom Full Stack
                 </h1>
                 <p className='text-xs text-HMorado italic'>
-                    "El conocimiento es nuestra mascara"
+                    “El conocimiento es nuestra máscara.” 
                 </p>
 
             </div>
