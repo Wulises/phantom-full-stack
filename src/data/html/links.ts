@@ -1,6 +1,6 @@
 export const linksHTML = [
 
-      {
+  {
     title: 'Etiqueta de anclaje (<a>)',
     description: 'Se usa para crear hipervínculos a otras páginas, archivos o ubicaciones dentro de la misma página.',
     code: `<a href="https://developer.mozilla.org"> Visitar MDN Web Docs </a>`,

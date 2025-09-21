@@ -1,5 +1,5 @@
 'use client'
-import { fundamentsCSS } from '@/data/css/fundaments'
+import { selectorsCSS } from '@/data/css/selectors'
 import SubtemaItem from '@/components/subTopicItems'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ export default function TEAMOSUMIRE() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        Fundamentos del css
+        Selectores de CSS
       </motion.h1>
 
       <p className='text-center text-sm text-white/60 italic mb-10'>
@@ -34,7 +34,7 @@ export default function TEAMOSUMIRE() {
           },
         }}
       >
-        {fundamentsCSS.map((item, i) => (
+        {selectorsCSS.map((item, i) => (
           <motion.div key={i} variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
             <SubtemaItem {...item} />
           </motion.div>

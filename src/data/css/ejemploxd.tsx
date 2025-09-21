@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-export default function Interactivo() {
+export default function TEAMOHARU() {
   const [activo, setActivo] = useState(false)
 
   return (

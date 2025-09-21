@@ -1,0 +1,436 @@
+---------- HTMl -------------
+📁 data
+ ┗ 📁 html
+    ┣ 📄 fundamentos.ts XXXXXX
+    ┣ 📄 Etiquetas de texto y formato.ts XXXXXXX
+    ┣ 📄 Listas.ts XXXXXXX
+    ┣ 📄 Enlaces.ts XXXXXXX AQUI HAY QUE HACER QUE SEA INTUITIVO
+    ┣ 📄 Imágenes y multimedia.ts XXXXXXX
+    ┣ 📄 Tablas.ts XXXXXXX
+    ┣ 📄 Formularios y entradas.ts XXXXXXX
+    ┣ 📄 Elementos semánticos.ts XXXXXXX
+    ┣ 📄 Etiquetas de contenedor genéricas.ts XXXXXXX 
+    ┣ 📄 Entidades y símbolos.ts XXXXXXX -----------------------------------------------
+    ┣ 📄 Atributos globales y específicos.ts XXXXXXX
+    ┣ 📄 Etiquetas útiles menores / formateo.ts XXXXXXX
+    ┣ 📄 Otros elementos útiles.ts
+    ┣ 📄 Comentarios y metadatos.ts XXXXXXX
+
+---------- CSS -------------
+📁 data
+ ┗ 📁 css
+    ┣ 📄 selectores-especificidad-cascada.ts        XXXXXXX      
+    ┣ 📄 modelo-de-caja.ts                          XXXXXXX
+    ┣ 📄 unidades-y-medidas.ts                      XXXXXXX
+    ┣ 📄 tipografia-y-colores.ts                    XXXXXXX
+    ┣ 📄 layout-basico.ts                           XXXXXXX       
+    ┣ 📄 flexbox.ts                                 XXXXXXX       
+    ┣ 📄 grid.ts                                           
+    ┣ 📄 position-y-zindex.ts                              
+    ┣ 📄 responsive-mediaqueries.ts                        
+    ┣ 📄 variables-css.ts                                  
+    ┣ 📄 transiciones-y-animaciones.ts                     
+    ┣ 📄 pseudoclases-y-pseudoelementos.ts                 
+    ┣ 📄 sombras-degradados-transformaciones.ts            
+    ┣ 📄 buenas-practicas-frameworks.ts                    (Tailwind, BEM, etc.)
+---------- JavaScript -------------
+📁 data
+ ┗ 📁 javascript
+    ┣ 📄 introduccion.ts
+    ┣ 📄 variables-constantes.ts
+    ┣ 📄 tipos-de-datos.ts
+    ┣ 📄 operadores.ts
+    ┣ 📄 estructuras-de-control.ts
+    ┣ 📄 funciones.ts
+    ┣ 📄 arrays.ts
+    ┣ 📄 objetos.ts
+    ┣ 📄 bucles.ts
+    ┣ 📄 manejo-del-dom.ts
+    ┣ 📄 eventos.ts
+    ┣ 📄 temporizadores.ts
+    ┣ 📄 json-y-storage.ts
+    ┣ 📄 scope-hoisting.ts
+    ┣ 📄 this-contexto.ts
+    ┣ 📄 funciones-callback-arrow.ts
+    ┣ 📄 promesas-y-asyncawait.ts
+    ┣ 📄 errores-trycatch.ts
+    ┣ 📄 buenas-practicas.ts
+
+
+✅ Estado actual de subtemas cubiertos
+Subtema	Estado	Incluye
+✅ Estructura básica del documento	OK	<!DOCTYPE html>, <html>, <head>, <body>, <meta>, <title>
+✅ Etiquetas de texto y formato	OK	<h1>–<h6>, <p>, <!-- -->
+✅ Listas	OK	<ul>, <ol>, <li>, <dl>, <dt>, <dd>
+
+1. Principales subtemas de HTML
+
+Basado en fuentes como Siberoloji, GeeksforGeeks y MDN, estos son los bloques clave que suelen cubrirse en "Fundamentos de HTML":
+
+Estructura básica del documento
+
+<!DOCTYPE html>, <html>, <head>, <meta>, <title>, <body> 
+siberoloji.com
+GeeksforGeeks
+
+Etiquetas de texto y formato
+
+Encabezados (<h1>–<h6>), párrafos (<p>), comentarios (<!-- -->) 
+siberoloji.com
+GeeksforGeeks
+
+Listas
+
+Ordenadas (<ol>), no ordenadas (<ul>), ítems (<li>), listas de descripción (<dl>, <dt>, <dd>) 
+GeeksforGeeks
+atofcode.blogspot.com
+
+Enlaces
+
+<a> con href, enlaces relativos y absolutos, target="_blank" 
+siberoloji.com
+atofcode.blogspot.com
+
+Imágenes y multimedia
+
+<img> con src, alt, title, tamaño; <video>, <audio> 
+siberoloji.com
+atofcode.blogspot.com
+
+Tablas
+
+<table>, <tr>, <td>, <th>, colspan, rowspan, <caption> 
+siberoloji.com
+atofcode.blogspot.com
+
+Formularios y entradas
+
+<form>, <input> (text, password, email...), <textarea>, <select>, <option>, atributos action, method, validación 
+siberoloji.com
+atofcode.blogspot.com
+
+Elementos semánticos
+
+<header>, <nav>, <section>, <article>, <aside>, <footer>, <main> 
+siberoloji.com
+atofcode.blogspot.com
+
+Etiquetas de contenedor genéricas
+
+<div> y <span> para estructurar contenido 
+Evolved Designs
+
+Entidades y símbolos
+
+&lt;, &gt;, &amp;, &copy;... 
+siberoloji.com
+
+Atributos globales y específicos
+
+class, id, style, src, alt, href, data-*, aria-* 
+siberoloji.com
+Evolved Designs
+
+Etiquetas útiles menores / formateo
+
+<strong>, <em>, <b>, <i>, <mark>, <small>, <sub>, <sup>, <del>, <ins> 
+ktnest.com
+Reddit
+
+Otros elementos útiles
+
+<iframe>, <canvas>, <progress>, <details>, <summary> 
+Evolved Designs
+Reddit
+
+Comentarios y metadatos
+
+Comentarios HTML, meta tags para charset, viewport, SEO básico (description, author) 
+Reddit
+siberoloji.com
+
+
+
+Lista de temas de JavaScript
+1. Introducción a JavaScript
+
+Qué es JavaScript
+
+Cómo incluir JavaScript en una página web
+
+Sintaxis básica y convenciones
+
+Variables (let, const, var)
+
+Comentarios
+
+Tipos de datos primitivos (números, cadenas, booleanos, null, undefined)
+
+2. Operadores básicos
+
+Operadores aritméticos (+, -, *, /, %)
+
+Operadores de asignación (=, +=, -=, *=, /=)
+
+Operadores de comparación (==, ===, !=, !==, >, <, >=, <=)
+
+Operadores lógicos (&&, ||, !)
+
+Operadores ternarios (condición ? valor1 : valor2)
+
+3. Estructuras de control
+
+Condicionales (if, else, else if)
+
+Switch (switch, case, default)
+
+Bucles:
+
+for
+
+while
+
+do while
+
+forEach
+
+map, filter, reduce
+
+4. Funciones
+
+Definición y declaración de funciones
+
+Parámetros y valores de retorno
+
+Funciones anónimas y de flecha (() => {})
+
+Funciones callback y recursivas
+
+5. Arrays (Arreglos)
+
+Declaración de arreglos
+
+Acceder a elementos y longitud
+
+Métodos útiles (push, pop, shift, unshift, splice, slice, concat, join)
+
+Iterar sobre arreglos (forEach, map, filter, reduce)
+
+Métodos avanzados de arreglo (find, some, every, sort, reverse)
+
+6. Objetos
+
+Definir objetos y acceder a sus propiedades
+
+Métodos y propiedades dentro de objetos
+
+this y su contexto
+
+Desestructuración de objetos (const { nombre, edad } = persona;)
+
+7. Manejo de errores
+
+try, catch, finally
+
+Lanzar errores con throw
+
+Excepciones y depuración
+
+8. DOM (Document Object Model)
+
+Qué es el DOM y cómo interactuar con él
+
+Selección de elementos (getElementById, getElementsByClassName, querySelector, querySelectorAll)
+
+Modificación de contenido (innerHTML, textContent, value)
+
+Cambiar estilos de CSS (style.property)
+
+Eventos:
+
+addEventListener
+
+Eventos comunes (click, submit, input, etc.)
+
+Propagación de eventos (bubbling y capturing)
+
+preventDefault y stopPropagation
+
+9. LocalStorage y SessionStorage
+
+Qué son y cómo usar localStorage y sessionStorage
+
+Almacenar y recuperar datos con setItem, getItem, removeItem, clear
+
+Aplicaciones comunes para el almacenamiento local
+
+10. Asincronía en JavaScript
+
+Conceptos básicos de la asincronía
+
+setTimeout y setInterval
+
+Promesas (Promise)
+
+async y await
+
+Manejo de errores en Promesas
+
+then, catch, y finally
+
+Fetch API para realizar peticiones HTTP
+
+AJAX y XMLHttpRequest
+
+11. Clases y objetos literales (ES6)
+
+Sintaxis de clases en JavaScript
+
+Constructores
+
+Métodos dentro de clases
+
+Herencia con clases
+
+Propiedades y métodos estáticos
+
+12. ES6+ (Características modernas)
+
+let y const vs var
+
+Arrow functions (() => {})
+
+Template literals (`texto ${variable}`)
+
+Desestructuración (arrays y objetos)
+
+Spread y rest operator (...)
+
+Map y Set
+
+for...of (iteradores)
+
+Promise.all, Promise.race
+
+13. Módulos y Modularización (ES6)
+
+Qué son los módulos en JavaScript
+
+Cómo importar y exportar módulos (import, export)
+
+Uso de default y exportaciones nombradas
+
+Bundlers como Webpack
+
+14. Manejo avanzado de objetos
+
+Proxies en JavaScript
+
+Métodos de objetos avanzados (Object.keys, Object.values, Object.entries)
+
+Object.freeze() y Object.seal()
+
+Object.defineProperty() y Object.defineProperties()
+
+15. Programación funcional en JavaScript
+
+Funciones de orden superior
+
+Inmutabilidad
+
+Funciones puras
+
+Composición de funciones
+
+Uso de funciones como parámetros
+
+16. Patrones de diseño en JavaScript
+
+Singleton
+
+Factory
+
+Observer
+
+Module
+
+Prototype
+
+17. Web APIs (más avanzadas)
+
+Web Storage API
+
+Geolocation API
+
+Canvas API
+
+Web Workers
+
+Service Workers (PWA)
+
+18. Herramientas de desarrollo y depuración
+
+Uso de console.log, console.table, console.error
+
+Depuración en el navegador (dev tools)
+
+Uso de herramientas como ESLint y Prettier
+
+19. Testing en JavaScript
+
+Unit testing con frameworks como Jest
+
+Métodos de prueba (expect, assert)
+
+Mocking y spies
+
+20. JavaScript en Node.js
+
+Introducción a Node.js
+
+Módulo fs para manejar archivos
+
+Instalación y uso de paquetes con NPM
+
+Servidores básicos con http o Express
+
+
+
+
+---------------
+
+🏰 Palacio de TypeScript – Piso 7
+Subnivel Final: Patrones avanzados en entrevistas con TS
+✅ Preguntas Teóricas
+¿Qué es un Mapped Type en TypeScript y para qué sirve? Transforma y mapea todos los tipos de un tipo existentes es como un .map pero para las claves de un tipo.
+Explica cómo funciona keyof en TypeScript y da un ejemplo de uso.
+Nos sirve para obtener las keys o claves de interfaces o tipos, type Esposas = { nombreEsposa: string,  edadEsposa: number } const clavesEsposa = keyof Esposas
+¿Qué son las Conditional Types y cómo se usan en TS? Son tipos condicionales como su nombre lo dice,, y estos son opcionales si tienen que seguir el contrato osease puede o no venir en el objeto
+Explica el patrón Exclude<T, U> y para qué lo usarías. Exluye o elimina un t osease un tipo/key/propiedad de un tipo que se deese, se usa para poder obtener todas las propiedades sin el que hayamos elijido, 
+Explica el patrón Extract<T, U> y da un ejemplo práctico. Es lo contrario a Exclude, porque con este extraes solamente la propiedad que se desea, 
+¿Qué es ReturnType<T> y cómo ayuda en proyectos grandes?
+Extrae el tipo de retorno de una funcion, function saludarEsposo(){ return 'TE AMO WULISES' } const returnEsposa = ReturnType<typeof saludarEsposo> 
+¿Cómo se puede usar keyof junto con Record para tipar un objeto dinámico? types clavesEsposas = 'Haru Okumura' | 'Makoto Niijima' types esposasEdades = Record<clavesEsposas, number> 
+¿Qué significa infer dentro de un tipo condicional en TypeScript? Permite extraer un tipo de una condición
+✅ Preguntas Prácticas
+Crea un tipo genérico Nullable<T> que permita que un tipo acepte también null. type Nullable<T> = T | null  const esposa = Nullable<string> 
+Crea un tipo ID<T> que represente un objeto con un campo id y de tipo genérico T.type Id<T> = { id: T } const haruID: ID<number> = { id: 555 }
+Usa Exclude para crear un tipo que quite "Makoto" de "Haru" | "Makoto" | "Kasumi" | "Sumire". type todasMisEsposas = 'Haru Okumura' | 'Makoto Niijima' | 'Kasumi Yoshizawa' | 'Sumire Yoshizawa' type sinMakotoNooo = exclude<todasMisEsposas, 'Makoto Niijima'>
+Usa Extract para crear un tipo que solo deje "Haru" y "Kasumi" de "Haru" | "Makoto" | "Kasumi" | "Sumire". type Haru&Kasumi = extract<todasMisEsposas, 'Haru Okumura' | 'Kasumi Yoshizawa'>
+Usa ReturnType para obtener el tipo de retorno de una función saludar. function saludar(){return 'TE AMO WULISES GRACIAS POR ESFORZARTE!!!' } const returnEsposa = ReturnType<typeof saludar>
+Crea un Mapped Type que haga que todas las propiedades de un tipo sean Promise<T>. type Promise<T> = { Promise [P in keyof todasMisEsposas]: T[P] }
+Declara un tipo PersonaKeys que use keyof para obtener las propiedades de una interfaz Persona. type PersonaKeys = keyof Persona
+Combina Partial y Record para crear un objeto opcional con claves "Haru" | "Makoto" | "Kasumi" | "Sumire" y valores de tipo string. const partialEsposa: Partial<todasMisEsposas> const mensajesEsposas: Record<partialEsposa, string> = { Haru: 'Te amo Ulises', Makoto: 'Siempre a tu lado', Kasumi: 'Saltando contigo', Sumire: 'Bailando juntos' }
+
+----
+🏰 Palacio de TypeScript
+
+yyy listo chatgpt porfa que la retroalimentación sea axcelente porfa te lo suplico ya sabes omite todas mis respuestas en tu retroalimentacion, y que cada tema tenga las frases como las has trabajado de mis hermosas motivaciones porfa aunque creo que kasumi seria el emote del moñito jajaj pero bueno esto de más en fin epero porfa que no se te olvide igual el objetivo principal de esto, al igual que el plan de este palacio de typescript profa y pbviamente que nunca se te olviden mis mtoivcaiones
+☕ Haru sonríe: “Una plantilla bien diseñada es como una receta de café: siempre puedes repetirla con consistencia.”
+🎀 Kasumi sonríe: “Reutilizar con elegancia es como un salto bien ejecutado: fluido y adaptable.”
+🌸 Kasumi ríe suavemente: “Incluso los Phantoms necesitan heredar con estilo, Ulises.”
+☕ Haru, 🧠 Makoto, 🎀Kasumi, 🌸 Sumire y 🔷 Lavenza
+----
+
+rogersanchezaltamirano@gmail.com
+Cruzazul17!

@@ -1,4 +1,5 @@
 export const fundamentsCSS = [
+
   {
     title: '¿Qué es CSS?',
     description: 'CSS es un lenguaje utilizado para describir la presentación de un documento HTML o XML.',
@@ -45,4 +46,5 @@ selector {
 <link rel="stylesheet" href="styles.css">`,
     tip: 'Para proyectos grandes, es recomendable usar CSS externo.'
   }
-];
+
+]

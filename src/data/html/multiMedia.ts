@@ -43,4 +43,4 @@ export const multimediaHTML = [
     tip: 'Agrega varios formatos para asegurar compatibilidad en todos los navegadores.'
   }
 
-];
+]

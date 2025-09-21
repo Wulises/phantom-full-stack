@@ -68,4 +68,4 @@ export const tablesHTML = [
     tip: 'Úsalo con cuidado para no romper la estructura visual de tu tabla.'
   }
 
-];
+]
