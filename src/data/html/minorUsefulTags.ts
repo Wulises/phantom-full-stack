@@ -19,7 +19,7 @@ export const minorUsefulTagsHTML = [
   {
     title: 'Etiqueta <small>',
     description: 'Muestra texto en tamaño más pequeño, útil para disclaimers, términos, etc.',
-    code: `<p> Precios sujetos a cambios. <small>*Aplican restricciones </small></p>`,
+    code: `<p> Precios sujetos a cambios. <small> *Aplican restricciones </small> </p>`,
     tip: 'Úsala para información secundaria, como notas legales o aclaraciones.'
   },
 

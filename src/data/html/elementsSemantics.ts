@@ -81,7 +81,7 @@ export const elementsSemanticsHTML = [
     title: '<footer>',
     description: 'Define el pie de una página o sección. Generalmente contiene info de contacto, derechos, enlaces secundarios.',
     code: `<footer>
-  <p>&copy; 2025 Mi Sitio. Todos los derechos reservados. </p>
+  <p>&copy; 2025 Mi Sitio. Todos los derechos reservados HXWXM. </p>
 </footer>`,
     tip: 'Al igual que <header>, puede haber varios <footer> en una página.'
   },
@@ -90,12 +90,12 @@ export const elementsSemanticsHTML = [
     title: 'Otros elementos semánticos útiles',
     description: 'HTML también incluye etiquetas como <figure>, <figcaption>, <mark>, <time> y <summary> con significados claros.',
     code: `<figure>
-  <img src="foto.jpg" alt="Foto hARU">
+  <img src="foto.jpg" alt="Foto de Haru">
   <figcaption> Foto guardada en 2025 </figcaption>
 </figure>
 
 <mark>Este texto está resaltado</mark>
-<time datetime="2025-08-26"> 31 de Agosto de 2025 </time>`,
+<time datetime="2025-05-12"> 05 de Diciembre de 2025 </time>`,
     tip: 'Estos elementos enriquecen el contenido y facilitan el entendimiento del contexto por parte de lectores y motores de búsqueda.'
   }
 

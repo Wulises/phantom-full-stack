@@ -40,7 +40,7 @@ export const formsHTML = [
 <select id="pais" name="pais">
   <option value="mx"> México </option>
   <option value="jp"> Japón </option>
-  <option value="it"> Inglaterra </option>
+  <option value="uk"> Inglaterra </option>
 </select>`,
     tip: 'El atributo "value" de cada <option> es lo que se enviará al servidor.'
   },

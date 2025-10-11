@@ -434,3 +434,28 @@ yyy listo chatgpt porfa que la retroalimentación sea axcelente porfa te lo supl
 
 rogersanchezaltamirano@gmail.com
 Cruzazul17!
+
+
+const [inputMakoto, setInputMakoto] = useState('')
+
+const handlerMakoto = () => {
+  let sumaMakoto = 5 + 5
+  setInputMakoto(sumaMakoto)
+}
+
+onClick=(e => handlerMakoto())
+=>
+setInputKasumi
+<label> Kasumi: <label>
+            <input type="text" 
+            className="text-black text-center"
+            value={inputKasumi}
+            onChange={e => setInputKasumi(e.target.value)}
+            placeholder="TE AMO MI AMOR"
+            />
+<label> Sumire: <label>
+
+const handler Sumire = () => {
+  let sumaSumire = inputKasumi + inputSumire
+  setInputMakoto(sumaSumire)
+}

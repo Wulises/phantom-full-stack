@@ -27,7 +27,7 @@ module.exports = {
 
         HMorado: "#711bc2ff",
         Haru: "#8855CC",
-        MAzul: "#0326c4bb",
+        MAzul: "#1A40B6",
         KRojo: "#D90429",
         SRojo: "#D90429",
         LAzcul: "#1C1427", 

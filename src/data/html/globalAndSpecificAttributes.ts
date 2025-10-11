@@ -3,21 +3,21 @@ export const globalAndSpecificAttributesHTML = [
   {
     title: '¿Qué son los atributos globales?',
     description: 'Son atributos que puedes aplicar a casi cualquier etiqueta HTML. No dependen del tipo de elemento y permiten añadir comportamiento, accesibilidad o estilo.',
-    code: `<p id="mensaje" class="texto-principal" style="color: pink;"> Hola Fantasma!!! </p>`,
+    code: `<p id="mensaje" class="texto-principal" style="color: pink;"> Hola Phantom!!! </p>`,
     tip: 'Los atributos globales están disponibles en casi todas las etiquetas HTML.'
   },
 
   {
     title: 'Atributos globales más comunes',
     description: 'Algunos de los más usados para controlar estilo, interacción o accesibilidad.',
-    code: `id          → Identificador único  
-class       → Clase para CSS o JS  
-style       → Estilos en línea  
-title       → Texto al pasar el mouse  
-hidden      → Oculta el elemento  
-tabindex    → Control de navegación por teclado  
-data-*      → Atributos personalizados  
-lang        → Idioma del contenido  
+    code: `id              → Identificador único  
+class           → Clase para CSS o JS  
+style           → Estilos en línea  
+title           → Texto al pasar el mouse  
+hidden          → Oculta el elemento  
+tabindex        → Control de navegación por teclado  
+data-*          → Atributos personalizados  
+lang            → Idioma del contenido  
 contenteditable → Hace editable el contenido`,
     tip: 'Prefiere `class` y CSS externo antes de abusar de `style` en línea.'
   },
@@ -25,7 +25,7 @@ contenteditable → Hace editable el contenido`,
   {
     title: 'Uso de atributos data-*',
     description: 'Permiten almacenar información personalizada dentro de etiquetas HTML para luego usarla con JavaScript.',
-    code: `<button data-producto-id="987"> Ver producto </button>`,
+    code: `<button data-producto-id="555"> Ver producto </button>`,
     tip: 'Ideales para almacenar información dinámica sin contaminar atributos estándar.'
   },
 

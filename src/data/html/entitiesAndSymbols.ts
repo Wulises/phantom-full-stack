@@ -3,19 +3,19 @@ export const entitiesAndSymbolsHTML = [
   {
     title: '¿Qué son las entidades HTML?',
     description: 'Son secuencias de caracteres que representan símbolos, caracteres especiales o espacios reservados que no se pueden escribir directamente en HTML.',
-    code: `&lt;div&gt;Hola Desarrollador&lt;/div&gt;`,
+    code: `&lt;div&gt; Hola Desarrollador &lt;/div&gt;`,
     tip: 'Las entidades siempre comienzan con "&" y terminan con ";".'
   },
 
   {
     title: 'Símbolos comunes en HTML',
     description: 'Aquí tienes algunas de las entidades más usadas para símbolos especiales.',
-    code: `&copy; → ©  
-&amp; → &  
-&nbsp; → (espacio no separable)  
+    code: `&copy;   → ©  
+&amp;    → &  
+&nbsp;   → (espacio no separable)  
 &dollar; → $  
-&raquo; → »  
-&laquo; → «`,
+&raquo;  → »  
+&laquo;  → «`,
     tip: 'Usa estas entidades para evitar errores de interpretación del HTML.'
   },
 
@@ -40,11 +40,11 @@ export const entitiesAndSymbolsHTML = [
   {
     title: 'Cómo insertar símbolos de moneda y matemáticos',
     description: 'Puedes representar múltiples símbolos matemáticos o monetarios.',
-    code: `&euro; → €  
-&pound; → £  
-&yen; → ¥  
+    code: `&euro;   → €  
+&pound;  → £  
+&yen;    → ¥  
 &plusmn; → ±  
-&times; → ×  
+&times;  → ×  
 &divide; → ÷`,
     tip: 'Ideal para aplicaciones de comercio o educación.'
   },

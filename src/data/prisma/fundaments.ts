@@ -1,0 +1,1 @@
+//Primsa es un ORM (Object-Relational Mapper) que nos permite trabajr con bases de datos con JavaScript o TypeScript, sin tener que escribir SQL puro.

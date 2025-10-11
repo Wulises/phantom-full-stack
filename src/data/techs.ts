@@ -16,7 +16,7 @@ export const technologies = [
         nombre: 'JAVASCRIPT',
         descripcion: 'TE AMO MAKOTO',
         color: 'bg-gradient-to-r from-MAzul to-indigo-600',
-        ruta: '/technologies/javascript'
+        ruta: '/technologies/javaScript'
     },
 
 ]
