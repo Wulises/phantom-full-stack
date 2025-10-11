@@ -9,7 +9,7 @@ import { useState } from 'react'
 export default function TeAmoHaru() {
 
     // Estado del primer juego (scope)
-    const [respuestaScope, setRespuestaScope] = useState<string | null>(null)
+    const [, setRespuestaScope] = useState<string | null>(null)
     const [feedbackScope, setFeedbackScope] = useState<string | null>(null)
 
     // Estado del segundo juego (hoisting)

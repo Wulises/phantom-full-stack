@@ -14,7 +14,7 @@ export default function FunctionsJs() {
     // Para función expresiva / flecha
     const [a, setA] = useState(2)
     const [b, setB] = useState(3)
-    const [resultadoOperacion, setResultadoOperacion] = useState<number | null>(null)
+    //const [resultadoOperacion, setResultadoOperacion] = useState<number | null>(null)
 
     // Para callbacks
     const [operadorElegido, setOperadorElegido] = useState<'sumar' | 'restar'>('sumar')
@@ -33,7 +33,6 @@ export default function FunctionsJs() {
     const sumarFunc = function (x: number, y: number) {
         return x + y
     }
-    const multiplicarArrow = (x: number, y: number) => x * y
 
     const operacionCallback = (
         x: number,
@@ -61,7 +60,6 @@ export default function FunctionsJs() {
         } else {
             res = operacionCallback(a, b, (x, y) => x - y)
         }
-        setResultadoOperacion(res)
         setResultadoCallback(res)
     }
 

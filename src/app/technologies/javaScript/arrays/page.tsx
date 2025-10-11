@@ -179,7 +179,7 @@ export default function ArraysJs() {
             {['push', 'pop', 'unshift', 'shift'].map(tipo => (
               <button
                 key={tipo}
-                onClick={() => handleMutacion(tipo as any)}
+                onClick={() => handleMutacion(tipo as 'push' | 'pop' | 'shift' | 'unshift')}
                 className="bg-MAzul hover:bg-MAzul/80 text-black px-4 py-2 rounded-md font-bold"
               >
                 {tipo}

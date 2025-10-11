@@ -238,7 +238,7 @@ export default function OperatorsJs() {
           <p className="text-white mt-4">
             Resultado con ?? :{' '}
             <span className="text-green-400 font-mono">
-              {inputNullish ?? 'Valor por defecto'}
+              {inputNullish}
             </span>
           </p>
           <p className="text-white">

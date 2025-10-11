@@ -23,7 +23,7 @@ export default function ObjectsJs() {
   const [saludoAlumno, setSaludoAlumno] = useState('')
 
   // Estado para for...in
-  const [objIterado, setObjIterado] = useState<{ [key: string]: string }>({
+  const [objIterado] = useState<{ [key: string]: string }>({
     nombre: 'Makoto',
     rol: 'Líder',
     habilidad: 'Nuke'
@@ -86,7 +86,7 @@ export default function ObjectsJs() {
   // Iteración con for...in
   const manejarIteracion = () => {
     let resultado = ''
-    for (let clave in objIterado) {
+    for (const clave in objIterado) {
       resultado += `${clave}: ${objIterado[clave]}\n`
     }
 

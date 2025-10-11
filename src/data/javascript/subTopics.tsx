@@ -19,7 +19,6 @@ import {
   PanelRight,
   Rocket,
   Layers,
-  Bug,
 } from 'lucide-react'
 
 export const subTopicsJs = [

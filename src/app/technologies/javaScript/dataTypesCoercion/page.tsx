@@ -45,7 +45,7 @@ export default function DataTypesCoercion() {
             }
 
             setTipoDetectado(typeof valorEvaluado)
-        } catch (err) {
+        } catch {
             setErrorTipo('Entrada inválida. Intenta escribir valores como "Hola", 42, true, null, etc.')
             setTipoDetectado('')
         }
@@ -102,7 +102,7 @@ export default function DataTypesCoercion() {
                 <SubtemaItem {...dataTypesCoercion[2]} />
 
                 <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-                    <h3 className="text-2xl font-phantom text-KRojo">🧪 Ejemplo interactivo – typeof</h3>
+                    <h3 className="text-2xl font-phantom text-KRojo"> Ejemplo interactivo – typeof </h3>
                     <input
                         aria-label="Entrada para evaluar tipo con typeof"
                         className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
@@ -158,13 +158,13 @@ export default function DataTypesCoercion() {
 
                     <div className="text-white mt-4 space-y-2">
                         <p>
-                            "{valorString}" + {valorNumber} ={' '}
+                            &quot;{valorString}&quot; + {valorNumber} ={' '}
                             <span className="text-green-400 font-mono">
                                 {valorString + valorNumber}
                             </span>
                         </p>
                         <p>
-                            "{valorString}" - {valorNumber} ={' '}
+                            &quot;{valorString}&quot; - {valorNumber} ={' '}
                             <span className="text-green-400 font-mono">
                                 {isNaN(parseFloat(valorString))
                                     ? 'NaN (valor string no convertible a número)'
