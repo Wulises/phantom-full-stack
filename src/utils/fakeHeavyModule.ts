@@ -1,0 +1,1 @@
+export const mensaje = 'Módulo pesado cargado exitosamente desde otro archivo.'

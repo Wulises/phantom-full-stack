@@ -128,7 +128,7 @@ export const subTopicsJs = [
     name: 'Módulos de JS',
     description: 'import/export, organización de código por archivos',
     icono: <Layers size={30} className='text-MAzul' />,
-    route: 'jsModules'
+    route: 'ModulesJs'
   },
 ]
 
