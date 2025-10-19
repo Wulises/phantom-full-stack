@@ -1,15 +1,22 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { asyncFunctionsJs } from '@/data/javascript/asyncFunctions'
 import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function AsyncFunctionsPage() {
+
+  type Usuario = {
+    id: number
+    name: string
+    email: string
+  }
+
   const [callbackOutput, setCallbackOutput] = useState('')
   const [promiseOutput, setPromiseOutput] = useState('')
-  const [apiData, setApiData] = useState<any[] | null>(null)
+  const [apiData, setApiData] = useState<Usuario[] | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -48,11 +55,16 @@ export default function AsyncFunctionsPage() {
       if (!res.ok) throw new Error('Error HTTP ' + res.status)
       const data = await res.json()
       setApiData(data)
-    } catch (err: any) {
-      setError(err.message || 'Error desconocido')
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message || 'Error desconocido')
+      }
     } finally {
       setLoading(false)
     }
+
+
+
   }
 
   return (
@@ -133,7 +145,7 @@ export default function AsyncFunctionsPage() {
 
                 {apiData && (
                   <ul className="space-y-2 bg-black/50 p-4 rounded">
-                    {apiData.map((user: any) => (
+                    {apiData.map((user: Usuario) => (
                       <li key={user.id} className="text-green-400 font-mono">
                         👤 {user.name} – {user.email}
                       </li>

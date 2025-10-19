@@ -34,13 +34,6 @@ export default function DomManipulationPage() {
 
   // Funciones interactivas
 
-  const handleCrearParrafo = () => {
-    const p = document.createElement('p')
-    p.textContent = '¡Hola, mundo desde DOM!'
-    document.body.appendChild(p)
-    setNodosMsg('Se agregó un párrafo al <body>.')
-  }
-
   const handleSeleccion = () => {
     const miDiv = document.getElementById('miDiv')
     const items = document.querySelectorAll('.item')
@@ -130,7 +123,7 @@ export default function DomManipulationPage() {
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
           <h3 className="text-2xl font-phantom text-MAzul">Ejemplo – Modificar contenido/atributos</h3>
           <h4 id="titulo" className="text-white text-xl">Título original</h4>
-          <img src="/images/Haru.png" alt="Original" className="mt-2" />
+          <img src="/images/Haru.png" alt="Original" width={555} height={555} className="mt-2 w-full h-auto rounded-lg object-contain" />
           <button
             onClick={handleModificar}
             className="bg-MAzul hover:bg-MAzul/80 text-black px-4 py-2 rounded font-bold"

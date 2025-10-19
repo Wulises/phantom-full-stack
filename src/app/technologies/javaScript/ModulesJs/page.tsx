@@ -28,7 +28,7 @@ export default function JsModulesPage() {
     try {
       const mod = await import('@/utils/fakeHeavyModule')
       setDinamico(mod?.mensaje || 'Módulo cargado sin mensaje')
-    } catch (e) {
+    } catch (error) {
       setDinamico('❌ Error al cargar el módulo')
     } finally {
       setCargando(false)

@@ -53,7 +53,7 @@ export default function DestructuringJs() {
   const handleRestObject = () => {
     try {
       const parsed = JSON.parse(inputObj)
-      const { [propToOmit]: omitido, ...resto } = parsed
+      const { [propToOmit]: _, ...resto } = parsed
       setRestObjResult(`Sin "${propToOmit}": ${JSON.stringify(resto)}`)
     } catch {
       setRestObjResult('❌ Objeto inválido.')

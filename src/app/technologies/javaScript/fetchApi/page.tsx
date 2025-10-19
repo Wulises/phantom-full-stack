@@ -26,6 +26,7 @@ export default function FetchApiPage() {
   const [editNombre, setEditNombre] = useState('')
   const [editEmail, setEditEmail] = useState('')
 
+  
   const obtenerUsuarios = async () => {
     setCargando(true)
     setError(null)
@@ -34,8 +35,12 @@ export default function FetchApiPage() {
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
       const data: Usuario[] = await resp.json()
       setUsuarios(data)
-    } catch (err: any) {
-      setError('❌ Error al obtener usuarios: ' + err.message)
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError('❌ Error al obtener usuarios: ' + err.message)
+      } else {
+        setError('❌ Error desconocido al obtener usuarios')
+      }
     } finally {
       setCargando(false)
     }

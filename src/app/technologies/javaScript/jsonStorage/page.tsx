@@ -7,12 +7,19 @@ import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function JsonStoragePage() {
+
+  interface PerfilUsuario {
+    nombre: string
+    edad: string
+    personaje: string
+  }
+
   // === Estados ===
   const [nombre, setNombre] = useState('')
   const [edad, setEdad] = useState('')
   const [personaje, setPersonaje] = useState('Haru')
-  const [guardado, setGuardado] = useState<any>(null)
-  const [storageView, setStorageView] = useState<Record<string, any>>({})
+  const [guardado, setGuardado] = useState<PerfilUsuario | null>(null)
+  const [storageView, setStorageView] = useState<Record<string, unknown>>({})
 
   // === Cargar datos al iniciar ===
   useEffect(() => {
@@ -30,13 +37,6 @@ export default function JsonStoragePage() {
     actualizarVistaStorage()
   }
 
-  const leerPerfil = () => {
-    const data = localStorage.getItem('perfilUsuario')
-    if (data) setGuardado(JSON.parse(data))
-    else setGuardado(null)
-    actualizarVistaStorage()
-  }
-
   const eliminarPerfil = () => {
     localStorage.removeItem('perfilUsuario')
     setGuardado(null)
@@ -51,7 +51,7 @@ export default function JsonStoragePage() {
   }
 
   const actualizarVistaStorage = () => {
-    const view: Record<string, any> = {}
+    const view: Record<string, unknown> = {}
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i)!
       try {

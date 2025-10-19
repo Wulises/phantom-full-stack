@@ -64,6 +64,14 @@ export default function TimersPage() {
     }
   }
 
+  useEffect(() => {
+    return () => {
+      if (intervaloRef.current) clearInterval(intervaloRef.current)
+      if (countdownRef.current) clearInterval(countdownRef.current)
+    }
+  }, [])
+
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-velvet to-royal px-6 py-10 space-y-12">
       <motion.h1
