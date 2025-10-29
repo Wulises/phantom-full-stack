@@ -22,7 +22,7 @@ export default function DomManipulationPage() {
     if (!target) return
 
     const observer = new MutationObserver((mutations) => {
-      mutations.forEach(m => {
+      mutations.forEach((m) => {
         setObservadoMsg(`Cambio detectado: tipo = ${m.type}`)
       })
     })
@@ -38,7 +38,9 @@ export default function DomManipulationPage() {
     const miDiv = document.getElementById('miDiv')
     const items = document.querySelectorAll('.item')
     if (miDiv || items) {
-      setSeleccionInfo(`miDiv: ${miDiv?.tagName} | items encontrados: ${items.length}`)
+      setSeleccionInfo(
+        `miDiv: ${miDiv?.tagName} | items encontrados: ${items.length}`
+      )
     } else {
       setSeleccionInfo('No se encontró el elemento.')
     }
@@ -99,11 +101,19 @@ export default function DomManipulationPage() {
       <div className="space-y-6">
         <SubtemaItem {...domManipulationJs[1]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Selección de elementos</h3>
-          <div id="miDiv" className="bg-black/80 text-white p-4">Este es un div con id “miDiv”.</div>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – Selección de elementos
+          </h3>
+          <div id="miDiv" className="bg-black/80 text-white p-4">
+            Este es un div con id “miDiv”.
+          </div>
           <div className="flex space-x-2">
-            <span className="item bg-black/80 px-2 py-1 text-white">item A</span>
-            <span className="item bg-black/80 px-2 py-1 text-white">item B</span>
+            <span className="item bg-black/80 px-2 py-1 text-white">
+              item A
+            </span>
+            <span className="item bg-black/80 px-2 py-1 text-white">
+              item B
+            </span>
           </div>
           <button
             onClick={handleSeleccion}
@@ -112,7 +122,9 @@ export default function DomManipulationPage() {
             Mostrar info
           </button>
           {seleccionInfo && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{seleccionInfo}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {seleccionInfo}
+            </p>
           )}
         </div>
       </div>
@@ -121,9 +133,19 @@ export default function DomManipulationPage() {
       <div className="space-y-6">
         <SubtemaItem {...domManipulationJs[2]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-MAzul">Ejemplo – Modificar contenido/atributos</h3>
-          <h4 id="titulo" className="text-white text-xl">Título original</h4>
-          <img src="/images/Haru.png" alt="Original" width={555} height={555} className="mt-2 w-full h-auto rounded-lg object-contain" />
+          <h3 className="text-2xl font-phantom text-MAzul">
+            Ejemplo – Modificar contenido/atributos
+          </h3>
+          <h4 id="titulo" className="text-white text-xl">
+            Título original
+          </h4>
+          <img
+            src="/images/Haru.png"
+            alt="Original"
+            width={555}
+            height={555}
+            className="mt-2 w-full h-auto rounded-lg object-contain"
+          />
           <button
             onClick={handleModificar}
             className="bg-MAzul hover:bg-MAzul/80 text-black px-4 py-2 rounded font-bold"
@@ -131,7 +153,9 @@ export default function DomManipulationPage() {
             Modificar contenido
           </button>
           {modContenidoMsg && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{modContenidoMsg}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {modContenidoMsg}
+            </p>
           )}
         </div>
       </div>
@@ -140,7 +164,9 @@ export default function DomManipulationPage() {
       <div className="space-y-6">
         <SubtemaItem {...domManipulationJs[3]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">Ejemplo – Agregar / Eliminar nodos</h3>
+          <h3 className="text-2xl font-phantom text-KRojo">
+            Ejemplo – Agregar / Eliminar nodos
+          </h3>
           <div
             ref={contenedorRef}
             className="bg-black/80 p-4 rounded space-y-2 text-white"
@@ -162,7 +188,9 @@ export default function DomManipulationPage() {
             </button>
           </div>
           {nodosMsg && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{nodosMsg}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {nodosMsg}
+            </p>
           )}
         </div>
       </div>
@@ -171,7 +199,9 @@ export default function DomManipulationPage() {
       <div className="space-y-6">
         <SubtemaItem {...domManipulationJs[4]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – MutationObserver</h3>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – MutationObserver
+          </h3>
           <div
             ref={observadoRef}
             className="bg-black/80 p-4 rounded text-white"
@@ -179,7 +209,9 @@ export default function DomManipulationPage() {
             Área observada (añade o modifica aquí algo)
           </div>
           {observadoMsg && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{observadoMsg}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {observadoMsg}
+            </p>
           )}
         </div>
       </div>

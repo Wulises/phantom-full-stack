@@ -27,6 +27,7 @@ export default function JsModulesPage() {
     setCargando(true)
     try {
       const mod = await import('@/utils/fakeHeavyModule')
+      console.log(mod)
       setDinamico(mod?.mensaje || 'Módulo cargado sin mensaje')
     } catch (error) {
       setDinamico('❌ Error al cargar el módulo')
@@ -47,7 +48,8 @@ export default function JsModulesPage() {
       </motion.h1>
 
       <p className="text-center text-sm text-white/60 italic mb-10">
-        Aprende a dividir tu código en archivos, importar, exportar y trabajar con módulos.
+        Aprende a dividir tu código en archivos, importar, exportar y trabajar
+        con módulos.
       </p>
 
       {/* Teoría */}
@@ -65,8 +67,9 @@ export default function JsModulesPage() {
           Ejemplo – Usando funciones importadas
         </h3>
         <p className="text-white/70">
-          Simulamos haber importado funciones <code>suma</code> y <code>resta</code> desde otro
-          módulo. Al hacer clic, se ejecutan ambas y se muestra la suma total.
+          Simulamos haber importado funciones <code>suma</code> y{' '}
+          <code>resta</code> desde otro módulo. Al hacer clic, se ejecutan ambas
+          y se muestra la suma total.
         </p>
         <button
           onClick={usarFunciones}
@@ -83,9 +86,12 @@ export default function JsModulesPage() {
 
       {/* Interactivo 2 – Import dinámico */}
       <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-        <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Import dinámico</h3>
+        <h3 className="text-2xl font-phantom text-HMorado">
+          Ejemplo – Import dinámico
+        </h3>
         <p className="text-white/70">
-          Al hacer clic, se importa un módulo pesado (falso) solo cuando lo necesitas.
+          Al hacer clic, se importa un módulo pesado (falso) solo cuando lo
+          necesitas.
         </p>
         <button
           onClick={cargarModuloPesado}

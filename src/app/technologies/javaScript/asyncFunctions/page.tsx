@@ -7,7 +7,6 @@ import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function AsyncFunctionsPage() {
-
   type Usuario = {
     id: number
     name: string
@@ -24,7 +23,7 @@ export default function AsyncFunctionsPage() {
   const ejecutarCallback = () => {
     setCallbackOutput('Esperando...')
     setTimeout(() => {
-      setCallbackOutput('✅ Callback ejecutado después de 1 segundo')
+      setCallbackOutput('Callback ejecutado después de 1 segundo')
     }, 1000)
   }
 
@@ -34,14 +33,14 @@ export default function AsyncFunctionsPage() {
     const promesa = new Promise<string>((resolve, reject) => {
       setTimeout(() => {
         const exito = true
-        if (exito) resolve('🎉 ¡Promesa resuelta con éxito!')
+        if (exito) resolve('🎉 ¡Promesa resuelta con éxito HXM!')
         else reject('💥 Promesa rechazada')
       }, 1500)
     })
 
     promesa
-      .then(msg => setPromiseOutput(msg))
-      .catch(err => setPromiseOutput(`❌ ${err}`))
+      .then((msg) => setPromiseOutput(msg))
+      .catch((err) => setPromiseOutput(`❌ ${err}`))
   }
 
   // === Fetch con async/await + manejo de errores ===
@@ -62,9 +61,6 @@ export default function AsyncFunctionsPage() {
     } finally {
       setLoading(false)
     }
-
-
-
   }
 
   return (
@@ -79,7 +75,8 @@ export default function AsyncFunctionsPage() {
       </motion.h1>
 
       <p className="text-center text-sm text-white/60 italic mb-10">
-        Entiende cómo funciona la asincronía con callbacks, promesas, async/await y fetch.
+        Entiende cómo funciona la asincronía con callbacks, promesas,
+        async/await y fetch.
       </p>
 
       {/* Subtemas + ejemplos interactivos */}
@@ -91,7 +88,9 @@ export default function AsyncFunctionsPage() {
             {/* Ejemplo callback */}
             {i === 1 && (
               <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-                <h3 className="text-xl text-HMorado font-bold">Ejemplo – Callback</h3>
+                <h3 className="text-xl text-HMorado font-bold">
+                  Ejemplo – Callback
+                </h3>
                 <button
                   onClick={ejecutarCallback}
                   className="bg-HMorado hover:bg-HMorado/80 text-white px-4 py-2 rounded font-bold"
@@ -99,7 +98,9 @@ export default function AsyncFunctionsPage() {
                   Ejecutar Callback
                 </button>
                 {callbackOutput && (
-                  <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{callbackOutput}</p>
+                  <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+                    {callbackOutput}
+                  </p>
                 )}
               </div>
             )}
@@ -107,7 +108,9 @@ export default function AsyncFunctionsPage() {
             {/* Ejemplo promesa */}
             {i === 2 && (
               <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-                <h3 className="text-xl text-KRojo font-bold">Ejemplo – Promesa</h3>
+                <h3 className="text-xl text-KRojo font-bold">
+                  Ejemplo – Promesa
+                </h3>
                 <button
                   onClick={ejecutarPromesa}
                   className="bg-KRojo hover:bg-KRojo/80 text-white px-4 py-2 rounded font-bold"
@@ -115,7 +118,9 @@ export default function AsyncFunctionsPage() {
                   Ejecutar Promesa
                 </button>
                 {promiseOutput && (
-                  <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{promiseOutput}</p>
+                  <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+                    {promiseOutput}
+                  </p>
                 )}
               </div>
             )}
@@ -140,7 +145,9 @@ export default function AsyncFunctionsPage() {
                 )}
 
                 {error && (
-                  <p className="text-red-400 font-mono bg-black/60 p-4 rounded">❌ {error}</p>
+                  <p className="text-red-400 font-mono bg-black/60 p-4 rounded">
+                    ❌ {error}
+                  </p>
                 )}
 
                 {apiData && (

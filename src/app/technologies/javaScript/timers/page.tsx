@@ -12,7 +12,7 @@ export default function TimersPage() {
   const handleTimeout = () => {
     setMensajeTimeout('⏳ Esperando...')
     setTimeout(() => {
-      setMensajeTimeout('✅ ¡Tiempo cumplido! Haru sonríe.')
+      setMensajeTimeout('¡Tiempo cumplido!')
     }, 2000)
   }
 
@@ -23,7 +23,7 @@ export default function TimersPage() {
   const iniciarIntervalo = () => {
     if (intervaloRef.current) return
     intervaloRef.current = setInterval(() => {
-      setContador(prev => prev + 1)
+      setContador((prev) => prev + 1)
     }, 1000)
   }
 
@@ -71,7 +71,6 @@ export default function TimersPage() {
     }
   }, [])
 
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-velvet to-royal px-6 py-10 space-y-12">
       <motion.h1
@@ -84,7 +83,8 @@ export default function TimersPage() {
       </motion.h1>
 
       <p className="text-center text-sm text-white/60 italic mb-10">
-        Aprende a controlar el tiempo con <code>setTimeout</code>, <code>setInterval</code> y más.
+        Aprende a controlar el tiempo con <code>setTimeout</code>,{' '}
+        <code>setInterval</code> y más.
       </p>
 
       {/* === Introducción === */}
@@ -96,7 +96,9 @@ export default function TimersPage() {
       <div className="space-y-6">
         <SubtemaItem {...timersJs[1]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-MAzul">Ejemplo – setTimeout</h3>
+          <h3 className="text-2xl font-phantom text-MAzul">
+            Ejemplo – setTimeout
+          </h3>
           <button
             onClick={handleTimeout}
             className="bg-MAzul hover:bg-MAzul/80 text-black px-4 py-2 rounded font-bold"
@@ -115,7 +117,9 @@ export default function TimersPage() {
       <div className="space-y-6">
         <SubtemaItem {...timersJs[2]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">Ejemplo – setInterval</h3>
+          <h3 className="text-2xl font-phantom text-KRojo">
+            Ejemplo – setInterval
+          </h3>
           <div className="flex items-center gap-4">
             <button
               onClick={iniciarIntervalo}
@@ -140,7 +144,9 @@ export default function TimersPage() {
       <div className="space-y-6">
         <SubtemaItem {...timersJs[3]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Cuenta regresiva</h3>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – Cuenta regresiva
+          </h3>
           <input
             type="number"
             value={segundos}

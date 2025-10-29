@@ -3,16 +3,17 @@ export const jsonStorageJs = [
     title: '¿Qué es JSON y almacenamiento local?',
     description:
       'JSON (JavaScript Object Notation) es un formato ligero para intercambio de datos. localStorage y sessionStorage permiten guardar datos en el navegador como cadenas.',
-    code: `const usuario = { nombre: "Futaba", edad: 20 };
+    code: `const usuario = { nombre: "Susana", edad: 58 };
 localStorage.setItem("usuario", JSON.stringify(usuario));
 
 const dato = localStorage.getItem("usuario");
 if (dato) {
   const obj = JSON.parse(dato);
-  console.log(obj.nombre); // "Futaba"
+  console.log(obj.nombre); // "Susana"
 }`,
     tip: 'Siempre convierte objetos con `JSON.stringify` al guardar y usa `JSON.parse` al leer.',
-    extra: '🕹️ Haru te recuerda: “Los recuerdos guardados pueden volver completos con cuidado.”'
+    extra:
+      '🕹️ Haru te recuerda: “Los recuerdos guardados pueden volver completos con cuidado.”',
   },
   {
     title: 'sessionStorage vs localStorage',
@@ -24,7 +25,8 @@ console.log(sessionStorage.getItem("activo"));
 localStorage.setItem("persistente", "valor");
 console.log(localStorage.getItem("persistente"));`,
     tip: 'Usa sessionStorage para datos temporales de sesión, localStorage para persistentes entre sesiones.',
-    extra: '🎓 Makoto dice: “Lo temporal y lo persistente tienen su lugar correcto.”'
+    extra:
+      '🎓 Makoto dice: “Lo temporal y lo persistente tienen su lugar correcto.”',
   },
   {
     title: 'Eliminar y limpiar datos',
@@ -33,7 +35,7 @@ console.log(localStorage.getItem("persistente"));`,
     code: `localStorage.removeItem("usuario");
 sessionStorage.clear();`,
     tip: 'Siempre remueve solo lo que realmente ya no necesitas; limpiar todo puede romper estado inesperado.',
-    extra: '🎭 Sumire susurra: “Eliminar también es cuidar lo que permanece.”'
+    extra: '🎭 Sumire susurra: “Eliminar también es cuidar lo que permanece.”',
   },
   {
     title: 'Ejemplo práctico – contador persistente',
@@ -51,7 +53,7 @@ function incrementar() {
 
 incrementar();`,
     tip: 'Al iniciar, lee la clave con JSON.parse / parseInt; al actualizar, guarda el nuevo valor.',
-    extra: '💃 Kasumi dice: “La constancia persiste en el tiempo.”'
+    extra: '💃 Kasumi dice: “La constancia persiste en el tiempo.”',
   },
   {
     title: 'Manejo de objetos complejos',
@@ -69,6 +71,7 @@ if (raw) {
   console.log(arr[1].texto); // "Leer novela"
 }`,
     tip: 'Ten cuidado con `undefined` o funciones: JSON no serializa funciones o valores no válidos.',
-    extra: '🌸 Haru analiza: “No todos los procesos caben en cadenas… pero puedes reconstruirlos.”'
+    extra:
+      '🌸 Haru analiza: “No todos los procesos caben en cadenas… pero puedes reconstruirlos.”',
   },
 ]

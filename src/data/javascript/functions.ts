@@ -8,7 +8,7 @@ export const functionsJs = [
     code: `function saludar(nombre) {
   return "Hola, " + nombre + "!";
 }
-console.log(saludar("Haru"));`,
+console.log(saludar("Wulises"));`,
     tip: 'Úsala cuando necesites funciones “nombradas” con hoisting parcial.',
     extra: 'Makoto recomienda: “Una función bien nombrada es más legible que mil comentarios.”'
   },

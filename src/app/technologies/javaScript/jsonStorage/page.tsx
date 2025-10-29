@@ -7,7 +7,6 @@ import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function JsonStoragePage() {
-
   interface PerfilUsuario {
     nombre: string
     edad: string
@@ -17,7 +16,7 @@ export default function JsonStoragePage() {
   // === Estados ===
   const [nombre, setNombre] = useState('')
   const [edad, setEdad] = useState('')
-  const [personaje, setPersonaje] = useState('Haru')
+  const [personaje, setPersonaje] = useState('Ingeniero')
   const [guardado, setGuardado] = useState<PerfilUsuario | null>(null)
   const [storageView, setStorageView] = useState<Record<string, unknown>>({})
 
@@ -30,7 +29,8 @@ export default function JsonStoragePage() {
 
   // === Funciones ===
   const guardarPerfil = () => {
-    if (!nombre.trim() || !edad.trim()) return alert('❗ Completa todos los campos')
+    if (!nombre.trim() || !edad.trim())
+      return alert('❗ Completa todos los campos')
     const perfil = { nombre, edad, personaje }
     localStorage.setItem('perfilUsuario', JSON.stringify(perfil))
     setGuardado(perfil)
@@ -110,10 +110,10 @@ export default function JsonStoragePage() {
                   onChange={(e) => setPersonaje(e.target.value)}
                   className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
                 >
-                  <option value="Haru">Haru 💐</option>
-                  <option value="Makoto">Makoto ⚙️</option>
-                  <option value="Kasumi">Kasumi 🌸</option>
-                  <option value="Sumire">Sumire 🌺</option>
+                  <option value="Ingeniero">Ingeniero</option>
+                  <option value="Medico">Medico</option>
+                  <option value="Arquitecto">Arquitecto</option>
+                  <option value="Jardinera">Jardinera</option>
                 </select>
               </div>
 
@@ -145,7 +145,9 @@ export default function JsonStoragePage() {
 
       {/* === Vista del storage === */}
       <div className="bg-black/40 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-        <h3 className="text-2xl font-phantom text-KRojo">Vista actual del localStorage</h3>
+        <h3 className="text-2xl font-phantom text-KRojo">
+          Vista actual del localStorage
+        </h3>
         <pre className="bg-black/60 text-green-400 font-mono p-4 rounded overflow-x-auto">
           {Object.keys(storageView).length
             ? JSON.stringify(storageView, null, 2)

@@ -7,7 +7,6 @@ import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function HigherOrderFunctionsPage() {
-    
   // === Estados ===
   const [numerosMap, setNumerosMap] = useState('1,2,3')
   const [resultadoMap, setResultadoMap] = useState<string>('')
@@ -22,47 +21,52 @@ export default function HigherOrderFunctionsPage() {
   const [resultadoComp, setResultadoComp] = useState<string>('')
 
   // === Funciones ===
+
+  const parseNumbers = (input: string): number[] => {
+    return input
+      .split(',')
+      .map((n) => parseFloat(n.trim()))
+      .filter((n) => !isNaN(n))
+  }
+
   const handleMap = () => {
-    try {
-      const arr = numerosMap.split(',').map(n => parseFloat(n.trim()))
-      const mapped = arr.map(n => n * 2)
-      setResultadoMap(JSON.stringify(mapped))
-    } catch {
-      setResultadoMap('❌ Entrada inválida.')
+    const arr = parseNumbers(numerosMap)
+    if (arr.length === 0) {
+      setResultadoMap('Entrada inválida o vacía.')
+      return
     }
+    const mapped = arr.map((n) => n * 2)
+    setResultadoMap(JSON.stringify(mapped))
   }
 
   const handleFilter = () => {
-    try {
-      const arr = edadesFilter.split(',').map(n => parseFloat(n.trim()))
-      const filtradas = arr.filter(n => n >= 18)
-      setResultadoFilter(JSON.stringify(filtradas))
-    } catch {
-      setResultadoFilter('❌ Entrada inválida.')
+    const arr = parseNumbers(edadesFilter)
+    if (arr.length === 0) {
+      setResultadoFilter('Entrada inválida o vacía.')
+      return
     }
+    const filtradas = arr.filter((n) => n >= 18)
+    setResultadoFilter(JSON.stringify(filtradas))
   }
 
   const handleReduce = () => {
-    try {
-      const arr = numsReduce.split(',').map(n => parseFloat(n.trim()))
-      const suma = arr.reduce((acc, n) => acc + n, 0)
-      setResultadoReduce(suma.toString())
-    } catch {
-      setResultadoReduce('❌ Entrada inválida.')
+    const arr = parseNumbers(numsReduce)
+    if (arr.length === 0) {
+      setResultadoReduce('Entrada inválida o vacía.')
+      return
     }
+    const suma = arr.reduce((acc, n) => acc + n, 0)
+    setResultadoReduce(suma.toString())
   }
 
   const handleComposicion = () => {
-    try {
-        const arr = numsComp.split(',').map(n => parseFloat(n.trim()))
-        // Filtrar números pares y luego multiplicar por 10
-        const resultado = arr
-        .filter(n => n % 2 === 0)
-        .map(n => n * 10)
-        setResultadoComp(JSON.stringify(resultado))
-    } catch {
-        setResultadoComp('❌ Entrada inválida.')
+    const arr = parseNumbers(numsComp)
+    if (arr.length === 0) {
+      setResultadoComp('Entrada inválida o vacía.')
+      return
     }
+    const resultado = arr.filter((n) => n % 2 === 0).map((n) => n * 10)
+    setResultadoComp(JSON.stringify(resultado))
   }
 
   return (
@@ -109,7 +113,9 @@ export default function HigherOrderFunctionsPage() {
             Doblar números
           </button>
           {resultadoMap && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{resultadoMap}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {resultadoMap}
+            </p>
           )}
         </div>
       </div>
@@ -118,7 +124,9 @@ export default function HigherOrderFunctionsPage() {
       <div className="space-y-6">
         <SubtemaItem {...higherOrderFunctionsJs[3]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">Ejemplo – .filter()</h3>
+          <h3 className="text-2xl font-phantom text-KRojo">
+            Ejemplo – .filter()
+          </h3>
           <input
             type="text"
             value={edadesFilter}
@@ -133,7 +141,9 @@ export default function HigherOrderFunctionsPage() {
             Filtrar mayores de edad
           </button>
           {resultadoFilter && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{resultadoFilter}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {resultadoFilter}
+            </p>
           )}
         </div>
       </div>
@@ -142,7 +152,9 @@ export default function HigherOrderFunctionsPage() {
       <div className="space-y-6">
         <SubtemaItem {...higherOrderFunctionsJs[4]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – .reduce()</h3>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – .reduce()
+          </h3>
           <input
             type="text"
             value={numsReduce}
@@ -165,29 +177,32 @@ export default function HigherOrderFunctionsPage() {
       </div>
 
       {/* Composición: filter + map */}
-        <div className="space-y-6">
+      <div className="space-y-6">
         <SubtemaItem {...higherOrderFunctionsJs[5]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-            <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Composición (filter + map)</h3>
-            <input
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – Composición (filter + map)
+          </h3>
+          <input
             type="text"
             value={numsComp}
             onChange={(e) => setNumsComp(e.target.value)}
             placeholder="Ej: 1,2,3,4,5"
             className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
-            />
-            <button
+          />
+          <button
             onClick={handleComposicion}
             className="bg-HMorado hover:bg-HMorado/80 text-white px-4 py-2 rounded font-bold"
-            >
+          >
             Filtrar pares y multiplicar por 10
-            </button>
-            {resultadoComp && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{resultadoComp}</p>
-            )}
+          </button>
+          {resultadoComp && (
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {resultadoComp}
+            </p>
+          )}
         </div>
-        </div>
-
+      </div>
 
       <div className="text-center mt-10">
         <Link href="/technologies/javaScript">

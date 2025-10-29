@@ -46,7 +46,7 @@ export default function DataTypesCoercion() {
 
             setTipoDetectado(typeof valorEvaluado)
         } catch {
-            setErrorTipo('Entrada inválida. Intenta escribir valores como "Hola", 42, true, null, etc.')
+            setErrorTipo('Entrada inválida. Intenta escribir valores como "Hola", 55, true, null, etc.')
             setTipoDetectado('')
         }
     }
@@ -106,7 +106,7 @@ export default function DataTypesCoercion() {
                     <input
                         aria-label="Entrada para evaluar tipo con typeof"
                         className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
-                        placeholder='Ej: "Hola", 42, true, null'
+                        placeholder='Ej: "Hola", 55, true, null'
                         value={inputTipo}
                         onChange={(e) => setInputTipo(e.target.value)}
                     />
@@ -183,7 +183,7 @@ export default function DataTypesCoercion() {
                     <input
                         aria-label="Valor para convertir explícitamente"
                         className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
-                        placeholder='Ingresa un valor (ej: "42", "", null)'
+                        placeholder='Ingresa un valor (ej: "55", "", null)'
                         value={valorConvertir}
                         onChange={(e) => setValorConvertir(e.target.value)}
                     />

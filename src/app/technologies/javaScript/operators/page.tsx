@@ -13,7 +13,7 @@ export default function OperatorsJs() {
   const [numB, setNumB] = useState<number | ''>(2)
 
   // Asignación
-  const [valorX, setValorX] = useState<number>(10)
+  const [valorX, setValorX] = useState<number>(5)
 
   // Comparación
   const [compA, setCompA] = useState<number | ''>(5)
@@ -122,7 +122,7 @@ export default function OperatorsJs() {
       <div className="space-y-6">
         <SubtemaItem {...operatorsJs[2]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-MAzul">🧪 Ejemplo interactivo – Comparación</h3>
+          <h3 className="text-2xl font-phantom text-MAzul"> Ejemplo interactivo – Comparación </h3>
           <div className="flex gap-4">
             <input
               className="w-1/2 p-2 rounded-md bg-black/80 border border-white/20 text-white"
@@ -164,7 +164,7 @@ export default function OperatorsJs() {
       <div className="space-y-6">
         <SubtemaItem {...operatorsJs[3]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">🧪 Ejemplo interactivo – Lógicos</h3>
+          <h3 className="text-2xl font-phantom text-KRojo"> Ejemplo interactivo – Lógicos </h3>
           <div className="flex gap-4">
             <button
               onClick={() => setBool1((b) => !b)}
@@ -199,7 +199,7 @@ export default function OperatorsJs() {
       <div className="space-y-6">
         <SubtemaItem {...operatorsJs[4]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-MAzul">🧪 Ejemplo interactivo – Ternario</h3>
+          <h3 className="text-2xl font-phantom text-MAzul"> Ejemplo interactivo – Ternario </h3>
           <input
             className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
             type="number"
@@ -222,7 +222,7 @@ export default function OperatorsJs() {
       <div className="space-y-6">
         <SubtemaItem {...operatorsJs[5]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">🧪 Ejemplo interactivo – Nullish / OR lógico</h3>
+          <h3 className="text-2xl font-phantom text-KRojo"> Ejemplo interactivo – Nullish / OR lógico </h3>
           <input
             className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
             placeholder="Ingresa algo (puede estar vacío)"

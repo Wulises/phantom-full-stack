@@ -12,7 +12,7 @@ export default function TEAMOSUMERI() {
         <main className='main-h-screen bg-gradient-to-br from velvet to-royal px-5 py-10'>
 
             <motion.h1
-                className="text-center text-5xl font-phantom text-HMorado mb-6"
+                className="text-center text-5xl font-phantom text-MAzul mb-6"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}

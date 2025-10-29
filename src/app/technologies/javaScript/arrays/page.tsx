@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function ArraysJs() {
   const [numeros, setNumeros] = useState<number[]>([1, 2, 3])
-  const [nombres, setNombres] = useState(['Ann', 'Makoto', 'Futaba'])
+  const [nombres, setNombres] = useState(['México', 'Inglaterra', 'Canadá'])
   const [arrayInput, setArrayInput] = useState('1,2,3')
   const [spreadArray, setSpreadArray] = useState<number[]>([])
   const [buscarInput, setBuscarInput] = useState('')
@@ -18,13 +18,15 @@ export default function ArraysJs() {
   const [inputArrayStr, setInputArrayStr] = useState('')
   const [customArray, setCustomArray] = useState<string[]>([])
   const [selectedIndex, setSelectedIndex] = useState(0)
-  const [elementoSeleccionado, setElementoSeleccionado] = useState<string | null>(null)
+  const [elementoSeleccionado, setElementoSeleccionado] = useState<
+    string | null
+  >(null)
 
   const handleCrearArray = () => {
     const arr = inputArrayStr
       .split(',')
-      .map(el => el.trim())
-      .filter(el => el !== '')
+      .map((el) => el.trim())
+      .filter((el) => el !== '')
 
     if (arr.length !== 3) {
       alert('Debes ingresar exactamente 3 elementos separados por coma')
@@ -62,7 +64,7 @@ export default function ArraysJs() {
   }
 
   const handleMap = () => {
-    setNombres(nombres.map(n => n.toUpperCase()))
+    setNombres(nombres.map((n) => n.toUpperCase()))
   }
 
   const handleSpread = () => {
@@ -73,8 +75,8 @@ export default function ArraysJs() {
 
     const nums = arrayInput
       .split(',')
-      .map(n => parseInt(n.trim()))
-      .filter(n => !isNaN(n))
+      .map((n) => parseInt(n.trim()))
+      .filter((n) => !isNaN(n))
 
     if (nums.length === 0) {
       alert('No se encontraron números válidos')
@@ -84,11 +86,10 @@ export default function ArraysJs() {
     setSpreadArray([...nums, 100, 200])
   }
 
-
   const handleBusqueda = () => {
-    const personas = ['Haru', 'Makoto', 'Sumire']
-    const encontrado = personas.find(p => p === buscarInput)
-    const filtrados = personas.filter(p => p.startsWith(buscarInput))
+    const personas = ['Perro', 'Gato', 'Búho']
+    const encontrado = personas.find((p) => p === buscarInput)
+    const filtrados = personas.filter((p) => p.startsWith(buscarInput))
     const incluye = personas.includes(buscarInput)
 
     const resultado = `
@@ -111,14 +112,17 @@ export default function ArraysJs() {
       </motion.h1>
 
       <p className="text-center text-sm text-white/60 italic mb-10">
-        Aprende a crear, modificar, recorrer, buscar y combinar arrays de forma moderna.
+        Aprende a crear, modificar, recorrer, buscar y combinar arrays de forma
+        moderna.
       </p>
 
       {/* Creación y acceso */}
       <div className="space-y-6">
         <SubtemaItem {...arraysJs[0]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl space-y-4">
-          <h3 className="text-xl font-phantom text-KRojo">Ejemplo interactivo</h3>
+          <h3 className="text-xl font-phantom text-KRojo">
+            Ejemplo interactivo
+          </h3>
 
           <input
             type="text"
@@ -138,7 +142,10 @@ export default function ArraysJs() {
           {customArray.length > 0 && (
             <div className="space-y-2">
               <p className="text-white">
-                Array creado: <span className="text-green-400 font-mono">[{customArray.join(', ')}]</span>
+                Array creado:{' '}
+                <span className="text-green-400 font-mono">
+                  [{customArray.join(', ')}]
+                </span>
               </p>
 
               <label className="text-KRojo">Selecciona índice (0-2):</label>
@@ -167,19 +174,22 @@ export default function ArraysJs() {
             </div>
           )}
         </div>
-
       </div>
 
       {/* Métodos de mutación */}
       <div className="space-y-6">
         <SubtemaItem {...arraysJs[1]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl space-y-4">
-          <h3 className="text-xl font-phantom text-MAzul">Mutaciones (push, pop...)</h3>
+          <h3 className="text-xl font-phantom text-MAzul">
+            Mutaciones (push, pop...)
+          </h3>
           <div className="flex flex-wrap gap-3">
-            {['push', 'pop', 'unshift', 'shift'].map(tipo => (
+            {['push', 'pop', 'unshift', 'shift'].map((tipo) => (
               <button
                 key={tipo}
-                onClick={() => handleMutacion(tipo as 'push' | 'pop' | 'shift' | 'unshift')}
+                onClick={() =>
+                  handleMutacion(tipo as 'push' | 'pop' | 'shift' | 'unshift')
+                }
                 className="bg-MAzul hover:bg-MAzul/80 text-black px-4 py-2 rounded-md font-bold"
               >
                 {tipo}
@@ -194,7 +204,9 @@ export default function ArraysJs() {
       <div className="space-y-6">
         <SubtemaItem {...arraysJs[2]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl space-y-4">
-          <h3 className="text-xl font-phantom text-HMorado">Iterar y transformar</h3>
+          <h3 className="text-xl font-phantom text-HMorado">
+            Iterar y transformar
+          </h3>
           <button
             onClick={handleMap}
             className="bg-HMorado hover:bg-HMorado/80 text-white px-4 py-2 rounded-md font-bold"
@@ -234,7 +246,7 @@ export default function ArraysJs() {
           <h3 className="text-xl font-phantom text-MAzul">Buscar en array</h3>
           <input
             type="text"
-            placeholder="Ingresa nombre (ej: Haru)"
+            placeholder="Ingresa nombre (ej: Gato)"
             className="w-full p-2 rounded-md bg-black/80 border border-white/20 text-white"
             value={buscarInput}
             onChange={(e) => setBuscarInput(e.target.value)}
@@ -246,13 +258,11 @@ export default function ArraysJs() {
             Buscar
           </button>
           {resultadoBusqueda && (
-
-            <pre className='bg-black/90 text-green-400 rounded-md text-base overflow-auto border border-white/10 shadow-inner whitespace-pre font-mono'>
+            <pre className="bg-black/90 text-green-400 rounded-md text-base overflow-auto border border-white/10 shadow-inner whitespace-pre font-mono">
               <p className="text-green-400 font-mono whitespace-pre-wrap">
                 {resultadoBusqueda}
               </p>
             </pre>
-
           )}
         </div>
       </div>

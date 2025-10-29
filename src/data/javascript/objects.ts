@@ -1,17 +1,19 @@
 export const objectsJs = [
   {
     title: 'Creación y acceso a objetos',
-    description: 'Aprende a definir objetos y acceder a sus propiedades con notación punto o corchetes.',
+    description:
+      'Aprende a definir objetos y acceder a sus propiedades con notación punto o corchetes.',
     code: `const persona = {
-  nombre: 'Futaba',
-  edad: 17,
-  hobby: 'Hacking'
+  nombre: 'Aramis',
+  edad:   24,
+  hobby:  'Hacking'
 }
 
-console.log(persona.nombre) // Futaba
-console.log(persona['edad']) // 17`,
+console.log(persona.nombre)  // Aramis
+console.log(persona['edad']) // 24`,
     tip: 'Puedes usar comillas y corchetes si la propiedad tiene espacios o caracteres especiales.',
-    extra: 'Futaba dice: “Cada objeto es una red de significados, como una mente conectada.”'
+    extra:
+      'Futaba dice: “Cada objeto es una red de significados, como una mente conectada.”',
   },
   {
     title: 'Modificar y agregar propiedades',
@@ -24,9 +26,10 @@ console.log(persona['edad']) // 17`,
 libro.paginas = 320
 libro['genero'] = 'Ficción'
 
-console.log(libro)`,
+console.log(libro) // { titulo: 'Metaverse Dive', autor: 'Makoto', paginas: 320, genero: 'Ficción' }`,
     tip: 'Los objetos son mutables, puedes agregar o editar propiedades en cualquier momento.',
-    extra: 'Makoto aconseja: “No temas modificar lo que ya está... si sabes por qué lo haces.”'
+    extra:
+      'Makoto aconseja: “No temas modificar lo que ya está... si sabes por qué lo haces.”',
   },
   {
     title: 'Recorrer objetos con for...in y Object.keys',
@@ -44,7 +47,8 @@ for (let key in stats) {
 const claves = Object.keys(stats)
 console.log(claves)`,
     tip: '`for...in` recorre propiedades enumerables. `Object.keys()` devuelve un array de claves.',
-    extra: 'Sumire reflexiona: “Recorrer un objeto es como ver los valores ocultos tras su fachada.”'
+    extra:
+      'Sumire reflexiona: “Recorrer un objeto es como ver los valores ocultos tras su fachada.”',
   },
   {
     title: 'Destructuring en objetos',
@@ -58,11 +62,13 @@ console.log(claves)`,
 const { modo, idioma } = config
 console.log(modo, idioma)`,
     tip: 'El nombre de la variable debe coincidir con la clave del objeto.',
-    extra: 'Haru recuerda: “Desestructurar es tomar lo esencial, sin romper el todo.”'
+    extra:
+      'Haru recuerda: “Desestructurar es tomar lo esencial, sin romper el todo.”',
   },
   {
     title: 'Métodos dentro de objetos',
-    description: 'Define funciones como parte de un objeto para encapsular comportamiento.',
+    description:
+      'Define funciones como parte de un objeto para encapsular comportamiento.',
     code: `const robot = {
   nombre: 'Aigis',
   saludar() {
@@ -70,9 +76,10 @@ console.log(modo, idioma)`,
   }
 }
 
-console.log(robot.saludar())`,
+console.log(robot.saludar()) // Hola, Soy Aigis`,
     tip: '`this` se refiere al objeto actual dentro de sus métodos.',
-    extra: 'Kasumi dice: “Un método es la forma en que un objeto expresa su voluntad.”'
+    extra:
+      'Kasumi dice: “Un método es la forma en que un objeto expresa su voluntad.”',
   },
   {
     title: 'Object.assign y spread operator',
@@ -85,6 +92,7 @@ const fusion2 = { ...base, ...extra }
 
 console.log(fusion1, fusion2)`,
     tip: '`Object.assign` y `spread` clonan o fusionan objetos, ¡sin mutar el original!',
-    extra: 'Makoto observa: “Fusionar es elegir qué se queda y qué se sobreescribe.”'
+    extra:
+      'Makoto observa: “Fusionar es elegir qué se queda y qué se sobreescribe.”',
   },
 ]

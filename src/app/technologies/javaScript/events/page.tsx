@@ -41,12 +41,11 @@ export default function EventsPage() {
     }
   }, [])
 
-  
   // === Hanlder ===
-    const handleEventClick = () => {
-      setClicMensaje('¡Evento detectado!')
-      alert('!Evento detecado!')
-    }
+  const handleEventClick = () => {
+    setClicMensaje('¡Evento detectado!')
+    alert('!Evento detecado!')
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-velvet to-royal px-6 py-10 space-y-12">
@@ -72,7 +71,9 @@ export default function EventsPage() {
       <div className="space-y-6">
         <SubtemaItem {...eventsJs[1]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Evento de clic</h3>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – Evento de clic
+          </h3>
           <button
             onClick={() => handleEventClick()}
             className="bg-HMorado hover:bg-HMorado/80 text-white px-4 py-2 rounded font-bold"
@@ -80,7 +81,9 @@ export default function EventsPage() {
             Haz clic aquí
           </button>
           {clicMensaje && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{clicMensaje}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {clicMensaje}
+            </p>
           )}
         </div>
       </div>
@@ -89,11 +92,18 @@ export default function EventsPage() {
       <div className="space-y-6">
         <SubtemaItem {...eventsJs[2]} />
         <div className="bg-black/30 border-l-4 border-MAzul p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-MAzul">Ejemplo – Formulario sin recarga</h3>
+          <h3 className="text-2xl font-phantom text-MAzul">
+            Ejemplo – Formulario sin recarga
+          </h3>
           <form
             onSubmit={(e) => {
               e.preventDefault()
-              setFormMensaje('Formulario interceptado sin recargar.')
+              const input = (e.target as HTMLFormElement)
+                .elements[0] as HTMLInputElement
+              setFormMensaje(
+                `Escribiste: "${input.value}" sin recargar la página.`
+              )
+              input.value = ''
             }}
             className="space-y-4"
           >
@@ -110,7 +120,9 @@ export default function EventsPage() {
             </button>
           </form>
           {formMensaje && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{formMensaje}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {formMensaje}
+            </p>
           )}
         </div>
       </div>
@@ -119,7 +131,9 @@ export default function EventsPage() {
       <div className="space-y-6">
         <SubtemaItem {...eventsJs[3]} />
         <div className="bg-black/30 border-l-4 border-KRojo p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-KRojo">Ejemplo – Delegación de eventos</h3>
+          <h3 className="text-2xl font-phantom text-KRojo">
+            Ejemplo – Delegación de eventos
+          </h3>
           <ul
             ref={listaRef}
             className="bg-black/50 p-4 rounded space-y-2 text-white list-disc list-inside"
@@ -140,10 +154,14 @@ export default function EventsPage() {
       <div className="space-y-6">
         <SubtemaItem {...eventsJs[4]} />
         <div className="bg-black/30 border-l-4 border-HMorado p-6 rounded-xl shadow-inner space-y-4">
-          <h3 className="text-2xl font-phantom text-HMorado">Ejemplo – Tecla presionada</h3>
+          <h3 className="text-2xl font-phantom text-HMorado">
+            Ejemplo – Tecla presionada
+          </h3>
           <p className="text-white/80">Presiona cualquier tecla y observa:</p>
           {tecla && (
-            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">{tecla}</p>
+            <p className="text-green-400 font-mono bg-black/60 p-4 rounded">
+              {tecla}
+            </p>
           )}
         </div>
       </div>

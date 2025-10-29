@@ -458,4 +458,4 @@ setInputKasumi
 const handler Sumire = () => {
   let sumaSumire = inputKasumi + inputSumire
   setInputMakoto(sumaSumire)
-}
+ 
