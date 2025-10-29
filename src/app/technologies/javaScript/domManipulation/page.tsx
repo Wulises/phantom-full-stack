@@ -51,11 +51,14 @@ export default function DomManipulationPage() {
     if (titulo) {
       titulo.textContent = 'Título cambiado 🎉'
     }
+
+    // Cambiar imagen con img
     const img = document.querySelector('img') as HTMLImageElement | null
     if (img) {
       img.src = '/images/makoto.png'
       img.alt = 'Imagen modificada'
     }
+
     setModContenidoMsg('Contenido y atributos modificados.')
   }
 

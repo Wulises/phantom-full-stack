@@ -7,22 +7,28 @@ import SubtemaItem from '@/components/subTopicItems'
 import Link from 'next/link'
 
 export default function DestructuringJs() {
-  // === 1. Destructuración de objetos ===
-  const [persona] = useState<{ [key: string]: any }>({
+  interface Persona {
+    nombre: string
+    edad: number
+    ciudad: string
+  }
+
+  const [persona] = useState<Persona>({
     nombre: 'Haru',
     edad: 27,
     ciudad: 'Tokyo',
   })
+
   const [propToExtract, setPropToExtract] = useState('nombre')
   const [outputObjResult, setOutputObjResult] = useState('')
 
   // === 2. Destructuración de arrays ===
-  const [colores, setColores] = useState(['rojo', 'verde', 'azul'])
+  const [colores] = useState(['rojo', 'verde', 'azul'])
   const [indexToExtract, setIndexToExtract] = useState(0)
   const [outputArrResult, setOutputArrResult] = useState('')
 
   // === 3. Rest en objetos ===
-  const [propToOmit, setPropToOmit] = useState('nombre')
+  const [propToOmit, setPropToOmit] = useState<keyof Persona>('nombre')
   const [restObjResult, setRestObjResult] = useState('')
 
   // === 4. Spread en arrays ===
@@ -32,12 +38,20 @@ export default function DestructuringJs() {
 
   // === Handlers ===
   const handleDestructureObject = () => {
-    const valor = (persona as any)[propToExtract]
-    setOutputObjResult(
-      valor !== undefined
-        ? `Valor de "${propToExtract}": ${JSON.stringify(valor)}`
-        : 'Propiedad no encontrada.'
-    )
+    const lowerCasePropToExtract = propToExtract.toLowerCase() // Convertir a minúsculas
+    const personaKeys = Object.keys(persona).map((key) => key.toLowerCase()) // Convertir las claves a minúsculas
+
+    // Buscar la propiedad en minúsculas
+    const index = personaKeys.indexOf(lowerCasePropToExtract)
+
+    if (index !== -1) {
+      const valor = persona[propToExtract as keyof Persona] // Usamos keyof Persona
+      setOutputObjResult(
+        `Valor de "${propToExtract}": ${JSON.stringify(valor)}`
+      )
+    } else {
+      setOutputObjResult('Propiedad no encontrada.')
+    }
   }
 
   const handleDestructureArray = () => {
@@ -55,7 +69,7 @@ export default function DestructuringJs() {
       setRestObjResult(`Propiedad "${propToOmit}" no encontrada.`)
       return
     }
-    const { [propToOmit]: _, ...resto } = persona
+    const { [propToOmit]: _ignored, ...resto } = persona
     setRestObjResult(
       `Objeto sin "${propToOmit}": ${JSON.stringify(resto, null, 2)}`
     )
@@ -78,8 +92,7 @@ export default function DestructuringJs() {
       </motion.h1>
 
       <p className="text-center text-sm text-white/60 italic mb-10">
-        Aprende a extraer, combinar y omitir datos de forma elegante — justo
-        como un Phantom Thief planificando un golpe perfecto 🎭
+        Aprende a extraer, combinar y omitir datos de forma elegante
       </p>
 
       {/* === Desestructuración de objetos === */}
@@ -168,13 +181,15 @@ export default function DestructuringJs() {
             A partir del mismo objeto <code>persona</code>, elige una propiedad
             para <b>omitir</b> y obtener el resto.
           </p>
-          <input
-            type="text"
+          <select
             value={propToOmit}
-            onChange={(e) => setPropToOmit(e.target.value)}
+            onChange={(e) => setPropToOmit(e.target.value as keyof Persona)}
             className="w-full p-2 rounded bg-black/80 border border-white/20 text-white"
-            placeholder="Propiedad a omitir"
-          />
+          >
+            <option value="nombre">Nombre</option>
+            <option value="edad">Edad</option>
+            <option value="ciudad">Ciudad</option>
+          </select>
           <button
             onClick={handleRestObject}
             className="bg-HMorado hover:bg-HMorado/80 text-white px-4 py-2 rounded font-bold"

@@ -30,6 +30,7 @@ export default function JsModulesPage() {
       console.log(mod)
       setDinamico(mod?.mensaje || 'Módulo cargado sin mensaje')
     } catch (error) {
+      console.error('Error al cargar el módulo:', error) // Imprime el error en consola
       setDinamico('❌ Error al cargar el módulo')
     } finally {
       setCargando(false)
